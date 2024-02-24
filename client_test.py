@@ -8,18 +8,33 @@ class ClientTest(unittest.TestCase):
       {'top_ask': {'price': 121.68, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 117.87, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
     ]
     """ ------------ Add the assertion below ------------ """
+    dataPoint = 'ABC'  # Set your expected data point value here
+
+        # Call getDataPoint function
+    result = getDataPoint(quotes)
+
+        # Assert that the result matches the expected data point
+    self.assertEqual(result, dataPoint)
+
 
   def test_getDataPoint_calculatePriceBidGreaterThanAsk(self):
     quotes = [
       {'top_ask': {'price': 119.2, 'size': 36}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 120.48, 'size': 109}, 'id': '0.109974697771', 'stock': 'ABC'},
       {'top_ask': {'price': 121.68, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 117.87, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
     ]
+    
     """ ------------ Add the assertion below ------------ """
+    dataPoint = 'DEF'  # Set your expected data point value here
 
+        # Call getDataPoint function
+    result = getDataPoint(quotes)
 
-  """ ------------ Add more unit tests ------------ """
+        # Assert that the result matches the expected data point
+    self.assertEqual(result, dataPoint)
+    """ ------------ Add more unit tests ------------ """
 
 
 
 if __name__ == '__main__':
     unittest.main()
+
